@@ -249,9 +249,13 @@ class GraphSegmentationApp(QMainWindow):
         self.open_button.clicked.connect(self.open_image)
         self.layout.addWidget(self.open_button)
 
-        self.segment_button = QPushButton('Segment', self)
-        self.segment_button.clicked.connect(self.segment_image)
-        self.layout.addWidget(self.segment_button)
+        self.draw_centers_button = QPushButton('Draw Centers', self)
+        self.draw_centers_button.clicked.connect(self.draw_centers)
+        self.layout.addWidget(self.draw_centers_button)
+
+        self.classification_button = QPushButton('Classification', self)
+        self.classification_button.clicked.connect(self.classification)
+        self.layout.addWidget(self.classification_button)
 
         self.label = QLabel(self)
         self.layout.addWidget(self.label)
